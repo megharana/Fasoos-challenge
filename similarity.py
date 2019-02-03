@@ -12,10 +12,14 @@ def second(query):  #finding minium index within same range from pos to i
     i_list = [
         index + 1 for index, value in enumerate(A) if value == A[query[1] - 1]
     ]
-    for x in range(i_list.index(query[1]), 0, -1):
-        if (i_list[x] - i_list[x - 1]) == 1:
-            min_i = i_list[x - 1]
-    print(min_i)
+    print(i_list)
+    if (i_list.index(query[1]) == 0):
+        print(i_list.index(query[1]))
+    else:
+        for x in range(i_list.index(query[1]), 0, -1):
+            if (i_list[x] - i_list[x - 1]) == 1:
+                min_i = i_list[x - 1]
+        print(min_i)
 
 
 for x in range(0, Q):
